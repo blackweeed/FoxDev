@@ -1,0 +1,14 @@
+{
+	"Navbar": {
+		"about-me": "o mnie",
+		"portfolio": "Projekty",
+		"services": "usługi",
+		"blog": "blog",
+		"contact": "kontakt"
+	},
+	"Hero Section": {
+		"welcome": "Witaj świecie!",
+		"heading": "Tworzę strony internetowe z pasją, łącząc elegancję wizualną z praktycznym zastosowaniem.",
+		"profession": "Fullstack developer"
+	}
+}

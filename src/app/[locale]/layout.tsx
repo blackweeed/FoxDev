@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import { useTranslations } from "next-intl";
-
-import { ComplexNavbar } from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
 import { FooterWithSocialLinks } from "@/components/Footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -26,14 +24,11 @@ export default function LocaleLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }>) {
-	const t = useTranslations("Index");
-
 	return (
 		<html lang={locale}>
 			<body className={rubik.className}>
 				<div className="relative flex flex-col overflow-x-hidden">
-					<p>{t("title")}</p>
-					<ComplexNavbar />
+					<Navbar />
 					<div className="absolute  -right-40 top-20 z-10 h-[25rem] w-[35rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#7aede4] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[2000]"></div>
 					<div className="absolute -right-60 top-20 z-10 h-[35rem] w-[45rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#1ed2c9] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[1600]"></div>
 					<section className="relative mt-32 flex-shrink overflow-x-hidden pb-10">

@@ -1,29 +1,31 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Techstack } from "@/components/Techstack";
 import { Form } from "@/components/Form";
 import { FAQ } from "@/components/FAQ";
 
 export default function Home() {
+	const t = useTranslations("Hero Section");
+
 	return (
 		<main className="flex flex-col items-center justify-center pt-10">
 			<section className="relative h-[70vh] w-full  px-40 ">
-				<p className="mb-4 w-fit bg-primary px-2 py-1 text-2xl">Cześć!</p>
-				<h1 className="max-w-5xl text-[4rem] font-semibold">
-					Projektuje nowoczesne i użyteczne strony internetowe
-				</h1>
+				<p className="mb-4 w-fit bg-primary px-2 py-1 text-2xl">{t("welcome")}</p>
+				<h1 className="max-w-5xl text-[4rem] font-semibold">{t("heading")}</h1>
 				<h2
-					className="tracking wide mt-20 text-[2.4125rem] font-medium text-black underline decoration-primary decoration-solid decoration-[3px]
+					className="tracking wide mt-20 inline-flex text-[2.4125rem] font-medium text-black underline decoration-primary decoration-solid decoration-[3.6px]
 "
 				>
-					Fullstack developer
+					{t("profession")}
 				</h2>
 			</section>
 			<section className=" flex w-full items-center gap-8 pl-40 pr-0">
 				<div className="basis-[45%]">
 					<p className="text-4xl font-medium tracking-wide">
-						Moim zadaniem jest poznanie twojego biznesu oraz zrozumienie celów do których dążysz. Te
-						informacje pozwalają na wypracowanie strategii oraz rozplanowania strony, która wzmocni
-						twój wizerunek w sieci i przełoży się na realizację założeń.
+						Dążę do dokładnego poznania specyfiki Twojej firmy i jej celów. Posiadając taką wiedzę,
+						jestem w stanie opracować unikalną strategię oraz zaprojektować stronę internetową,
+						która nie tylko odzwierciedla wyjątkowość Twojego przedsiębiorstwa w przestrzeni
+						cyfrowej, ale również wspiera realizację Twoich celów biznesowych.
 					</p>
 				</div>
 				<div className="relative h-[700px] w-full basis-[55%]  ">

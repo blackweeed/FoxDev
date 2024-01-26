@@ -1,5 +1,14 @@
 {
-	"Index": {
-		"title": "Witaj świecie!"
+	"Navbar": {
+		"about-me": "about me",
+		"portfolio": "Projects",
+		"services": "services",
+		"blog": "blog",
+		"contact": "contact"
+	},
+	"Hero Section": {
+		"welcome": "Welcome to the world!",
+		"heading": "I create websites with passion, combining visual elegance with practical application.",
+		"profession": "Fullstack developer"
 	}
 }
