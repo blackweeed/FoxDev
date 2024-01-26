@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
+
 import {
 	Navbar,
 	MobileNav,
@@ -23,7 +24,9 @@ import {
 	DevicePhoneMobileIcon,
 	BriefcaseIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "../navigation";
 import { Logo } from "./Logo";
+import { DarkModeSwitcher } from "./DarkModeSwitcher";
 
 const navListMenuItems = [
 	{
@@ -63,7 +66,7 @@ function NavListMenu() {
 			<Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
 				<MenuHandler>
 					<Typography as="a" href="#" variant="small" className="font-normal">
-						<MenuItem className="hidden items-center gap-2 text-lg font-medium text-navy lg:flex lg:rounded-full">
+						<MenuItem className="text-navy hidden items-center gap-2 text-lg font-medium lg:flex lg:rounded-full">
 							<BriefcaseIcon className="h-[18px] w-[18px] " /> Usługi{" "}
 							<ChevronDownIcon
 								strokeWidth={2}
@@ -76,9 +79,9 @@ function NavListMenu() {
 					<Card
 						shadow={false}
 						variant="gradient"
-						className="col-span-3 grid h-full w-full place-items-center rounded-md bg-mint"
+						className="bg-mint col-span-3 grid h-full w-full place-items-center rounded-md"
 					>
-						<GlobeEuropeAfricaIcon strokeWidth={1} className="h-28 w-28 fill-navy" />
+						<GlobeEuropeAfricaIcon strokeWidth={1} className="fill-navy h-28 w-28" />
 					</Card>
 					<ul className="col-span-4 flex w-full flex-col gap-1">{renderItems}</ul>
 				</MenuList>
@@ -116,14 +119,13 @@ const navListItems = [
 
 function NavList() {
 	return (
-		<ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-black text-xl">
+		<ul className="mb-4 mt-2 flex flex-col gap-2 text-xl text-black lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
 			{navListItems.map(({ label, icon, url }, index) => (
 				<div className="flex items-center" key={index}>
 					{index === 2 && <NavListMenu />}
 					<Link href={url}>
 						<MenuItem className="flex items-center gap-2 lg:rounded-full">
-							{React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
-							<span> {label}</span>
+							{React.createElement(icon, { className: "h-[18px] w-[18px]" })} <span> {label}</span>
 						</MenuItem>
 					</Link>
 				</div>
@@ -142,15 +144,11 @@ export function ComplexNavbar() {
 	}, []);
 
 	return (
-		<Navbar className="z-50 max-w-full rounded-none  text-2xl lg:px-20 py-6 fixed backdrop-blur-md">
+		<Navbar className="fixed z-50 max-w-full  rounded-none py-6 text-2xl backdrop-blur-md lg:px-20">
 			<div className="relative mx-auto flex items-center justify-between text-black">
-				<Logo className="text-black text-3xl font-semibold" />
+				<Logo className="text-3xl font-semibold text-black" />
 				<div className="hidden gap-4 lg:flex">
 					<NavList />
-					{/* <div className="flex items-center gap-1">
-						<Switch crossOrigin="" />
-						<MoonIcon className="text-gray-400 h-6 w-6" />
-					</div> */}
 				</div>
 				<IconButton
 					size="sm"
@@ -161,6 +159,16 @@ export function ComplexNavbar() {
 				>
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
+				<div className="flex items-center gap-1">
+					<DarkModeSwitcher />
+					<Link href="/" locale="de" className="hover:text-primary">
+						DE
+					</Link>
+					<p>/</p>
+					<Link href="/" locale="en" className="hover:text-primary">
+						EN
+					</Link>
+				</div>
 			</div>
 			<MobileNav open={isNavOpen} className="overflow-scroll">
 				<NavList />
