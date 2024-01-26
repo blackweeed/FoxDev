@@ -8,9 +8,6 @@ dependencies:
   '@heroicons/react':
     specifier: ^2.1.1
     version: 2.1.1(react@18.2.0)
-  '@lordicon/react':
-    specifier: ^1.4.1
-    version: 1.4.1(react@18.2.0)
   '@material-tailwind/react':
     specifier: ^2.1.8
     version: 2.1.8(react-dom@18.2.0)(react@18.2.0)
@@ -248,29 +245,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
-
-  /@lordicon/helpers@1.4.1:
-    resolution: {integrity: sha512-59TZlDSiGjN2AY2JAnyynTT3Zt05uKFmcLcv/1ZBst0Cc4emyrtglFObHxLcFyonHrsTM25cZ9FxK98Y6V90MA==}
-    dev: false
-
-  /@lordicon/react@1.4.1(react@18.2.0):
-    resolution: {integrity: sha512-qXUQ5XuqUpN4cAyEDnW5Do2p0tbHUbkTkRUo1EnsVbJFy+uiJR6X8NqYZxT62dNSmLBskuA9DdKLLLXiU2c2KQ==}
-    peerDependencies:
-      lottie-react-native: '*'
-      lottie-web: '*'
-      react: '*'
-      react-native: '*'
-    peerDependenciesMeta:
-      lottie-react-native:
-        optional: true
-      lottie-web:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      '@lordicon/helpers': 1.4.1
-      react: 18.2.0
-    dev: false
 
   /@material-tailwind/react@2.1.8(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-+YI8DTS8dz8FNkjbsgz1HS6+CRszZ+gUErw5FnTuAL2ONeM9R204B6u4PKd9otjYlQQS/fKjKuQ/mwLubWljfg==}
