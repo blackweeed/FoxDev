@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { FooterWithSocialLinks } from "@/components/Footer";
 
@@ -25,17 +26,19 @@ export default function LocaleLayout({
 	params: { locale: string };
 }>) {
 	return (
-		<html lang={locale}>
+		<html lang={locale} suppressHydrationWarning>
 			<body className={rubik.className}>
-				<div className="relative flex flex-col overflow-x-hidden">
-					<Navbar />
-					<div className="absolute  -right-40 top-20 z-10 h-[25rem] w-[35rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#7aede4] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[2000]"></div>
-					<div className="absolute -right-60 top-20 z-10 h-[35rem] w-[45rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#1ed2c9] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[1600]"></div>
-					<section className="relative mt-32 flex-shrink overflow-x-hidden pb-10">
-						{children}
-					</section>
-					<FooterWithSocialLinks />
-				</div>
+				<Providers>
+					<div className="relative flex flex-col overflow-x-hidden">
+						<Navbar />
+						<div className="absolute  -right-40 top-20 z-10 h-[25rem] w-[35rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#7aede4] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[2000]"></div>
+						<div className="absolute -right-60 top-20 z-10 h-[35rem] w-[45rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#1ed2c9] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[1600]"></div>
+						<section className="relative mt-32 flex-shrink overflow-x-hidden pb-10">
+							{children}
+						</section>
+						<FooterWithSocialLinks />
+					</div>
+				</Providers>
 			</body>
 		</html>
 	);
