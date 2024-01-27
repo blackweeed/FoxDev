@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { pathnames, locales, localePrefix } from "./config";
 
+// eslint-disable-next-line import/no-default-export
 export default createMiddleware({
 	defaultLocale: "en",
 	locales,
