@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-	.animation-delay-2000 {
-		animation-delay: 2s;
+@layer base {
+	:root {
+		--color-primary: 39 222 191;
+		--color-background: 255 255 255;
+		--color-background-dark: 33 36 39;
+		--color-text: 33 36 39;
+		--color-text-lighter: 176 176 176;
+		--color-natural: 51 181 229;
+		--color-accent: 147 157 164;
 	}
-	.animation-delay-4000 {
-		animation-delay: 4s;
-	}
-}
 
-*::selection {
-	background-color: #27debf;
+	:root[class~="dark"] {
+		--color-primary: 39 222 191; /* Ten kolor może pozostać taki sam, ponieważ jest wystarczająco jasny */
+		--color-background: 28 30 34; /* Ciemniejszy odcień szarości/bliski czerni */
+		--color-background-dark: 255 255 255;
+		--color-text: 255 255 255; /* Czysta biel dla tekstu, aby zapewnić kontrast */
+		--color-text-lighter: 176 176 176; /* Jasnoszary, może pozostać taki sam lub nieco jaśniejszy */
+		--color-natural: 51 181 229; /* Ten kolor może pozostać taki sam, jest odpowiednio jasny */
+		--color-accent: 147 157 164; /* Nieco jaśniejszy odcień szarości, aby utrzymać kontrast */
+	}
 }
 
 .flip {

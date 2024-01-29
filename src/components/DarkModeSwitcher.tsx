@@ -11,13 +11,13 @@ export const DarkModeSwitcher = () => {
 	useEffect(() => setIsMounted(true), []);
 
 	if (!mounted) {
-		<div className="mr-8 flex w-20 items-center rounded-full border-2 border-primary shadow-md"></div>;
+		<div className="mr-8 flex w-24 items-center rounded-full border-2 border-primary shadow-md"></div>;
 	}
 
 	return (
 		<button
 			onClick={resolvedTheme === "dark" ? () => setTheme("light") : () => setTheme("dark")}
-			className={`${resolvedTheme === "dark" ? "justify-end bg-black" : "justify-start bg-white/60"} mr-8 flex w-20 items-center rounded-full  shadow-md shadow-primary `}
+			className={`${resolvedTheme === "dark" ? "justify-end bg-black" : "justify-start bg-white/60"} mr-8 flex w-24 items-center rounded-full  shadow-md shadow-primary `}
 		>
 			{resolvedTheme === "dark" ? (
 				<div className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-lg shadow-black">

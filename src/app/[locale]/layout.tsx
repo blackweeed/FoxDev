@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { FooterWithSocialLinks } from "@/components/Footer";
+import { BluredGradients } from "@/ui/atoms/BluredGradients";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -21,12 +22,11 @@ export default function LocaleLayout({
 }>) {
 	return (
 		<html lang={locale} suppressHydrationWarning>
-			<body className={rubik.className}>
+			<body className={`${rubik.className} selection:bg-colorPrimary`}>
 				<Providers>
 					<div className="relative flex flex-col overflow-x-hidden">
-						<Navbar />
-						<div className="absolute  -right-40 top-20 z-10 h-[25rem] w-[35rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#7aede4] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[2000]"></div>
-						<div className="absolute -right-60 top-20 z-10 h-[35rem] w-[45rem] rotate-45 rounded-full  bg-gradient-to-l from-primary via-[#1ed2c9] to-[#76e0ceea] mix-blend-multiply blur-3xl duration-[1600]"></div>
+						<Navbar locale={locale} />
+						<BluredGradients />
 						<section className="relative mt-32 flex-shrink overflow-x-hidden pb-10">
 							{children}
 						</section>

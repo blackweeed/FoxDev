@@ -51,7 +51,7 @@ export const Techstack = () => {
 
 	return (
 		<div
-			className={`bg-bgColorDark h-[260px] w-full rounded-t-[3.125rem] p-10 ${technologies[itemIndex].border} relative overflow-hidden `}
+			className={`bg-colorBackgroundDark h-[260px] w-full rounded-t-[3.125rem] p-10 ${technologies[itemIndex].border} relative overflow-hidden `}
 		>
 			<div className="grid h-full w-full grid-cols-4 grid-rows-2 gap-8">
 				{technologies.map((tech, index) => {
@@ -69,7 +69,7 @@ export const Techstack = () => {
 										clipPath:
 											"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
 									}}
-									className={`relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] ${technologies[itemIndex].background} opacity-70 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]`}
+									className={`relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] ${technologies[itemIndex].background} opacity-70 blur-xl sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]`}
 								></div>
 							</div> */}
 						</div>

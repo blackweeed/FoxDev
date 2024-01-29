@@ -9,8 +9,10 @@ import { useTranslations } from "next-intl";
 import { Link } from "../navigation";
 import { Logo } from "./Logo";
 import { DarkModeSwitcher } from "./DarkModeSwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { MobileMenu } from "./MobileMenu";
 
-export function Navbar() {
+export function Navbar({ locale }: { locale: string }) {
 	const t = useTranslations("Navbar");
 
 	const navListItems = [
@@ -37,9 +39,9 @@ export function Navbar() {
 	];
 
 	return (
-		<nav className="fixed z-50 w-full rounded-none  bg-white/70 py-6 text-2xl shadow-md backdrop-blur-md lg:px-20">
-			<div className="relative mx-auto flex items-center justify-between text-black">
-				<Logo className="text-3xl font-semibold text-black" />
+		<nav className="bg-background/70 fixed z-50 w-full  rounded-none px-4 py-6 text-2xl shadow-md backdrop-blur-md lg:px-20">
+			<div className="text-text relative mx-auto flex items-center justify-between">
+				<Logo className="text-3xl font-semibold text-primary" />
 				<div className="hidden gap-4 lg:flex">
 					<ul className="mb-4 mt-2 flex flex-col gap-10 text-xl capitalize text-black lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
 						{navListItems.map(({ label, Icon, url }, index) => (
@@ -54,24 +56,15 @@ export function Navbar() {
 						))}
 					</ul>
 				</div>
+				<div className="hidden items-center gap-1 lg:flex ">
+					<DarkModeSwitcher />
+					<LanguageSwitcher locale={locale} />
+				</div>
 				<button className="ml-auto mr-2 lg:hidden">
 					<Bars2Icon className="h-6 w-6" />
 				</button>
-				<div className="flex items-center gap-1">
-					<DarkModeSwitcher />
-					<Link href="/" locale="pl" className="hover:text-primary">
-						PL
-					</Link>
-					<p>/</p>
-					<Link href="/" locale="de" className="hover:text-primary">
-						DE
-					</Link>
-					<p>/</p>
-					<Link href="/" locale="en" className="hover:text-primary">
-						EN
-					</Link>
-				</div>
 			</div>
+			{/* <MobileMenu navListItems={navListItems} locale={locale} /> */}
 		</nav>
 	);
 }

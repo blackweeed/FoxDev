@@ -1,3 +1,4 @@
+/* eslint-disable import/no-default-export */
 import type { Config } from "tailwindcss";
 
 import withMT from "@material-tailwind/react/utils/withMT";
@@ -7,20 +8,24 @@ export default withMT({
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
 			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				"turquoise-gradient":
+					"linear-gradient(to right, #27debf, #53e0c7, #80e3d0, #add6d9, #c7d7e8, #e1e6f8)",
 			},
 			colors: {
-				primary: "#27debf",
-				secondary: "#101010",
-				textColor: "#ffffff",
-				bgColor: "#ffffff",
-				bgColorDark: "#101010",
-				textLight: "#939da4",
+				colorPrimary: "rgb(var(--color-primary) / <alpha-value>)",
+				colorBackground: "rgb(var(--color-background) / <alpha-value>)",
+				colorBackgroundDark: "rgb(var(--color-background-dark) / <alpha-value>)",
+				colorText: "rgb(var(--color-text) / <alpha-value>)",
+				colorTextLighter: "rgb(var(--color-text-lighter) / <alpha-value>)",
+				colorNatura: "rgb(var(--color-natural) / <alpha-value>)",
+				colorAccent: "rgb(var(--color-accent) / <alpha-value>)",
+				colorTransparent: "transparent",
+				colorCurrent: "currentColor",
 			},
 			animation: {
 				blob: "blob 10s infinite",
