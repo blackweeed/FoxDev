@@ -10,6 +10,7 @@ export default withMT({
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	darkMode: ["class", '[data-mode="dark"]'],
 	theme: {
 		extend: {
 			backgroundImage: {
@@ -21,6 +22,7 @@ export default withMT({
 				colorBackground: "rgb(var(--color-background) / <alpha-value>)",
 				colorBackgroundDark: "rgb(var(--color-background-dark) / <alpha-value>)",
 				colorText: "rgb(var(--color-text) / <alpha-value>)",
+				colorTextLight: "rgb(var(--color-text-light) / <alpha-value>)",
 				colorTextLighter: "rgb(var(--color-text-lighter) / <alpha-value>)",
 				colorNatura: "rgb(var(--color-natural) / <alpha-value>)",
 				colorAccent: "rgb(var(--color-accent) / <alpha-value>)",
@@ -52,5 +54,4 @@ export default withMT({
 		},
 	},
 	plugins: [],
-	darkMode: "class",
 } satisfies Config);

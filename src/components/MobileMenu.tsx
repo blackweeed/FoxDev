@@ -1,7 +1,7 @@
 import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { DarkModeSwitcher } from "./DarkModeSwitcher";
-import { LanguageSwitcher } from "./LanguageSwitcher";
+import { DarkModeSwitcher } from "../ui/atoms/DarkModeSwitcher";
+import { LanguageSwitcher } from "../ui/atoms/LanguageSwitcher";
 import { Link } from "@/navigation";
 
 export const MobileMenu = ({ navListItems, locale }) => {
@@ -13,7 +13,7 @@ export const MobileMenu = ({ navListItems, locale }) => {
 			{navListItems.map(({ label, Icon, url }, index) => (
 				<div className="flex items-center " key={index}>
 					<Link href={url}>
-						<div className="text-text flex items-center gap-2 underline decoration-primary decoration-2 lg:rounded-full">
+						<div className="text-text decoration-primary flex items-center gap-2 underline decoration-2 lg:rounded-full">
 							<Icon className="h-6 w-6" />
 							<span> {label}</span>
 						</div>

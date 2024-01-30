@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SectionHeading } from "../atoms/SectionHeading";
+import { HeadingSection } from "../atoms/HeadingSection/HeadingSection";
 import { FAQItem } from "../molecules/FAQItem";
 
 type FAQItemType = {
@@ -20,7 +20,7 @@ export const SectionFAQ = ({ faqArray, heading, headingSpan }: SectionFAQProps) 
 
 	return (
 		<section className="mt-16 w-full px-6 lg:px-40">
-			<SectionHeading
+			<HeadingSection
 				className="[&>*:last-child]:underline [&>*:last-child]:decoration-colorPrimary"
 				heading={heading}
 				headingSpan={headingSpan}

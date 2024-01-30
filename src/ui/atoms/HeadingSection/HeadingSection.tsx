@@ -1,4 +1,4 @@
-export const SectionHeading = ({
+export const HeadingSection = ({
 	heading,
 	headingSpan,
 	className,

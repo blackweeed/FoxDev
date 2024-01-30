@@ -2,26 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	:root {
-		--color-primary: 39 222 191;
-		--color-background: 255 255 255;
-		--color-background-dark: 33 36 39;
-		--color-text: 33 36 39;
-		--color-text-lighter: 176 176 176;
-		--color-natural: 51 181 229;
-		--color-accent: 147 157 164;
+/* @layer base {
+	body {
+		@apply relative min-h-screen dark:bg-black dark:text-white;
 	}
+} */
 
-	:root[class~="dark"] {
-		--color-primary: 39 222 191; /* Ten kolor może pozostać taki sam, ponieważ jest wystarczająco jasny */
-		--color-background: 28 30 34; /* Ciemniejszy odcień szarości/bliski czerni */
-		--color-background-dark: 255 255 255;
-		--color-text: 255 255 255; /* Czysta biel dla tekstu, aby zapewnić kontrast */
-		--color-text-lighter: 176 176 176; /* Jasnoszary, może pozostać taki sam lub nieco jaśniejszy */
-		--color-natural: 51 181 229; /* Ten kolor może pozostać taki sam, jest odpowiednio jasny */
-		--color-accent: 147 157 164; /* Nieco jaśniejszy odcień szarości, aby utrzymać kontrast */
-	}
+:root {
+	--color-primary: 39 222 191;
+	--color-background: 255 255 255;
+	--color-background-dark: 33 36 39;
+	--color-text: 33 36 39;
+	--color-text-light: 255 255 255;
+	--color-text-lighter: 176 176 176;
+	--color-natural: 51 181 229;
+	--color-accent: 147 157 164;
+}
+
+:root[class~="dark"] {
+	--color-primary: 10 87 191; /* Ten kolor może pozostać taki sam, ponieważ jest wystarczająco jasny */
+	--color-background: 28 30 34; /* Ciemniejszy odcień szarości/bliski czerni */
+	--color-background-dark: 255 255 255;
+	--color-text: 255 255 255; /* Czysta biel dla tekstu, aby zapewnić kontrast */
+	--color-text-light: 0 0 0;
+	--color-text-lighter: 176 176 176; /* Jasnoszary, może pozostać taki sam lub nieco jaśniejszy */
+	--color-natural: 51 181 229; /* Ten kolor może pozostać taki sam, jest odpowiednio jasny */
+	--color-accent: 147 157 164; /* Nieco jaśniejszy odcień szarości, aby utrzymać kontrast */
 }
 
 .flip {

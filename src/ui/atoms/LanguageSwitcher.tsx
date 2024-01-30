@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@/navigation";
 
 export const LanguageSwitcher = ({ locale }: { locale: string }) => {
 	const [toogle, setToggle] = useState(false);
+	const ref = useRef<HTMLDivElement>(null);
 
 	const languages = [
 		{ shourtcut: "pl", title: "poland", icon: "/country-icons/poland.svg" },
@@ -14,11 +15,24 @@ export const LanguageSwitcher = ({ locale }: { locale: string }) => {
 
 	const currenLanguage = languages.find((languge) => languge.shourtcut === locale);
 
+	const handleClickOutside = (event: MouseEvent) => {
+		if (ref.current && !ref.current.contains(event.target as Node)) {
+			setToggle(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
+
 	return (
 		<button
 			onClick={() => setToggle((prev) => !prev)}
 			type="button"
-			className="relative inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary bg-white/80 py-1 text-sm font-medium uppercase shadow-lg shadow-primary"
+			className="relative inline-flex w-full items-center justify-center gap-2 rounded-md border border-colorPrimary bg-colorBackground py-1 text-sm font-medium uppercase shadow-lg shadow-colorPrimary"
 		>
 			<Image
 				className="overflow-hidden rounded-full"
@@ -42,7 +56,10 @@ export const LanguageSwitcher = ({ locale }: { locale: string }) => {
 				/>
 			</svg>
 			{toogle && (
-				<div className="absolute -top-2 h-fit w-[140%] rounded-md border-2 border-primary bg-white shadow-xl shadow-primary">
+				<div
+					ref={ref}
+					className="absolute -top-2 h-fit w-[140%] rounded-md border-2 border-colorPrimary bg-colorBackground shadow-xl shadow-colorPrimary"
+				>
 					{languages.map((language) => (
 						<Link
 							href="/"
@@ -56,7 +73,7 @@ export const LanguageSwitcher = ({ locale }: { locale: string }) => {
 								src={language.icon ?? ""}
 								width={26}
 								height={26}
-								alt="poland"
+								alt={language.title}
 							/>
 						</Link>
 					))}

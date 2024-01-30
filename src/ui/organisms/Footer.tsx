@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
-import { Logo } from "./Logo";
+import { Logo } from "../atoms/Logo/Logo";
 
 const LINKS = [
 	{
@@ -22,14 +22,14 @@ const currentYear = new Date().getFullYear();
 
 export function FooterWithSocialLinks() {
 	return (
-		<footer className="bg-bgColorDark relative mt-10 w-full py-8">
+		<footer className="relative mt-10 w-full bg-colorBackgroundDark py-8">
 			<div className="mx-auto w-full max-w-7xl px-8">
 				<div className="flex flex-col justify-between gap-4 md:grid-cols-2 lg:flex-row">
-					<Logo className="text-primary text-4xl font-medium" />
+					<Logo className="text-4xl font-medium text-colorPrimary" />
 					<div className="grid grid-cols-3 justify-between gap-20	">
 						{LINKS.map(({ title, items }) => (
 							<ul key={title}>
-								<Typography variant="h4" className="text-primary mb-3 font-medium">
+								<Typography variant="h4" className="mb-3 font-medium text-colorPrimary">
 									{title}
 								</Typography>
 								{items.map((link) => (
@@ -37,7 +37,7 @@ export function FooterWithSocialLinks() {
 										<Typography
 											as="a"
 											href="#"
-											className="text-textColor py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+											className="text-colorTextLight py-1.5 font-normal transition-colors hover:text-blue-gray-900"
 										>
 											{link}
 										</Typography>
@@ -50,7 +50,7 @@ export function FooterWithSocialLinks() {
 				<div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
 					<Typography
 						variant="small"
-						className="text-textColor mb-4 text-center font-normal md:mb-0"
+						className="mb-4 text-center font-normal text-colorText md:mb-0"
 					>
 						&copy; {currentYear} <a href="https://material-tailwind.com/">Konrad Jankowski</a>.
 						Wszystkie prawa zastrzeżone.

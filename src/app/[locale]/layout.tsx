@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/Navbar";
-import { FooterWithSocialLinks } from "@/components/Footer";
+import { Navbar } from "@/ui/organisms/Navbar";
+import { FooterWithSocialLinks } from "@/ui/organisms/Footer";
 import { BluredGradients } from "@/ui/atoms/BluredGradients";
 
 const rubik = Rubik({ subsets: ["latin"] });
@@ -27,9 +27,7 @@ export default function LocaleLayout({
 					<div className="relative flex flex-col overflow-x-hidden">
 						<Navbar locale={locale} />
 						<BluredGradients />
-						<section className="relative mt-32 flex-shrink overflow-x-hidden pb-10">
-							{children}
-						</section>
+						<section className="relative flex-shrink">{children}</section>
 						<FooterWithSocialLinks />
 					</div>
 				</Providers>

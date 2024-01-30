@@ -1,4 +1,4 @@
-import { SectionHeading } from "../atoms/SectionHeading";
+import { HeadingSection } from "../atoms/HeadingSection/HeadingSection";
 import { Techstack } from "../molecules/Techstack";
 
 export const SectionTechnology = ({
@@ -10,7 +10,7 @@ export const SectionTechnology = ({
 }) => {
 	return (
 		<section className="mt-6 w-full">
-			<SectionHeading
+			<HeadingSection
 				heading={heading}
 				headingSpan={headingSpan}
 				className="[&>*:first-child]:bg-colorPrimary [&>*:first-child]:px-1 [&>*:first-child]:py-0.5"

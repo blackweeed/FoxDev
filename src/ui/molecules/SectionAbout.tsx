@@ -8,7 +8,7 @@ export const SectionAbout = ({ about }: { about: string }) => {
 			<div className="order-last lg:order-first lg:basis-[45%]">
 				<Pargraph about={about} />
 			</div>
-			<div className="relative h-[20rem] w-full lg:h-[44rem] lg:basis-[55%]">
+			<div className="pointer-events-none relative h-[20rem] w-full lg:h-[44rem] lg:basis-[55%]">
 				<ResponsiveImage src={"/lis.png"} alt="fox image" />
 			</div>
 		</section>

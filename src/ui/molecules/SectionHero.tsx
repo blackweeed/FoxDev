@@ -1,6 +1,6 @@
 import React from "react";
-import { WelcomeText } from "../atoms/WelcomeText";
-import { MainHeading } from "../atoms/MainHeading";
+import { WelcomeText } from "../atoms/WelcomeText/WelcomeText";
+import { MainHeading } from "../atoms/MainHeading/MainHeading";
 import { Subheading } from "../atoms/SubHeading";
 
 type HeroSectionProps = {
@@ -11,7 +11,7 @@ type HeroSectionProps = {
 
 export const SectionHero = ({ welcome, heading, subheading }: HeroSectionProps) => {
 	return (
-		<section className="relative flex h-[50vh] w-full flex-col items-center justify-start text-center lg:h-[70vh] lg:items-start lg:px-40 lg:text-left ">
+		<section className="relative mt-28 flex h-[50vh] w-full flex-col items-center justify-start text-center lg:h-[70vh] lg:items-start lg:px-40 lg:text-left ">
 			<WelcomeText welcome={welcome} />
 			<MainHeading heading={heading} />
 			<Subheading subheading={subheading} />
