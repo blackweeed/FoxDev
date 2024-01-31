@@ -23,6 +23,12 @@ dependencies:
   flag-icons:
     specifier: ^7.1.0
     version: 7.1.0
+  hamburger-react:
+    specifier: ^2.5.0
+    version: 2.5.0(react@18.2.0)
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   next:
     specifier: 14.1.0
     version: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
@@ -70,6 +76,9 @@ devDependencies:
   '@storybook/test':
     specifier: ^7.6.10
     version: 7.6.10
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   '@types/node':
     specifier: ^20
     version: 20.11.6
@@ -112,9 +121,6 @@ devDependencies:
   storybook:
     specifier: ^7.6.10
     version: 7.6.10
-  storybook-tailwind-dark-mode:
-    specifier: ^1.0.22
-    version: 1.0.22(@storybook/addons@7.6.10)(@storybook/api@7.6.10)(@storybook/components@7.6.10)(@storybook/core-events@7.6.10)(@storybook/theming@7.6.10)(react-dom@18.2.0)(react@18.2.0)
   tailwindcss:
     specifier: ^3.3.0
     version: 3.4.1
@@ -3172,27 +3178,6 @@ packages:
     resolution: {integrity: sha512-+bA6juC/lH4vEhk+w0rXakaG8JgLG4MOYrIudk5vJKQaC6X58LIM9N4kzIS2KSExRhkExXBPrWsnMfCo7uxmKg==}
     dependencies:
       memoizerific: 1.11.3
-    dev: true
-
-  /@storybook/addons@7.6.10(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-lv/oT4ZGMKfXh6bB7LbuRP85bwRprBPYuMMl+e1Ikvu5WTfqVoJRYjc7mvXaIHGCI6DZ/nFcbRjra6q8ZhoDgw==}
-    dependencies:
-      '@storybook/manager-api': 7.6.10(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.6.10
-      '@storybook/types': 7.6.10
-    transitivePeerDependencies:
-      - react
-      - react-dom
-    dev: true
-
-  /@storybook/api@7.6.10(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-28qfs7sdzcnKfGBVnWuKgqAPe++NLrMjL6cp/rxuRlAtGyl0Q3eC9jj1ggOm4SFVTu6NoFzTuTXFUEbskZVk1Q==}
-    dependencies:
-      '@storybook/client-logger': 7.6.10
-      '@storybook/manager-api': 7.6.10(react-dom@18.2.0)(react@18.2.0)
-    transitivePeerDependencies:
-      - react
-      - react-dom
     dev: true
 
   /@storybook/blocks@7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.19)(react-dom@18.2.0)(react@18.2.0):
@@ -7493,6 +7478,14 @@ packages:
       through2: 2.0.5
     dev: true
 
+  /hamburger-react@2.5.0(react@18.2.0):
+    resolution: {integrity: sha512-5GSXe+ucxTPJ0SkhIsPQ/PRDweZPIKya1lfahAuExx31SdheeUA4uOPfQIAirbKona8hvo79VDr5LJQzPXsdpw==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /handlebars@4.7.8:
     resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
     engines: {node: '>=0.4.7'}
@@ -8396,7 +8389,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -10556,31 +10548,6 @@ packages:
 
   /store2@2.14.2:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
-    dev: true
-
-  /storybook-tailwind-dark-mode@1.0.22(@storybook/addons@7.6.10)(@storybook/api@7.6.10)(@storybook/components@7.6.10)(@storybook/core-events@7.6.10)(@storybook/theming@7.6.10)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-I0HSVCuvo3OkaGDnCjLM7V1OYmQccrUCAGZ5ZaJfl9s3e93WA6DKFpQRbuoSidci+PTy+KvgrINgE08rA16bWA==}
-    peerDependencies:
-      '@storybook/addons': ^7.0.0
-      '@storybook/api': ^7.0.0
-      '@storybook/components': ^7.0.0
-      '@storybook/core-events': ^7.0.0
-      '@storybook/theming': ^7.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/addons': 7.6.10(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/api': 7.6.10(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/components': 7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.19)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-events': 7.6.10
-      '@storybook/theming': 7.6.10(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /storybook@7.6.10:

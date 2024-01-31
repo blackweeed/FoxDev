@@ -22,7 +22,7 @@ export default function LocaleLayout({
 }>) {
 	return (
 		<html lang={locale} suppressHydrationWarning>
-			<body className={`${rubik.className} selection:bg-colorPrimary`}>
+			<body className={`${rubik.className}selection:bg-colorPrimary`}>
 				<Providers>
 					<div className="relative flex flex-col overflow-x-hidden">
 						<Navbar locale={locale} />

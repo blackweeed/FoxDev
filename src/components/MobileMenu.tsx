@@ -1,29 +1,58 @@
-import React from "react";
-import { XMarkIcon } from "@heroicons/react/24/solid";
+"use client";
+
+import {
+	BuildingLibraryIcon,
+	DevicePhoneMobileIcon,
+	PaintBrushIcon,
+	PencilSquareIcon,
+	XMarkIcon,
+} from "@heroicons/react/24/solid";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { DarkModeSwitcher } from "../ui/atoms/DarkModeSwitcher";
 import { LanguageSwitcher } from "../ui/atoms/LanguageSwitcher";
-import { Link } from "@/navigation";
+import { NavMenu } from "@/ui/molecules/NavMenu/NavMenu";
+import { ButtonHamburger } from "@/ui/atoms/ButtonHamburger/ButtonHamburger";
 
-export const MobileMenu = ({ navListItems, locale }) => {
+export const MobileMenu = ({ locale }: { locale: string }) => {
+	const t = useTranslations("Navbar");
+	const [toggle, setToggle] = useState(false);
+
+	const navListItems = [
+		{
+			label: t("about-me"),
+			url: "/about",
+			Icon: BuildingLibraryIcon,
+		},
+		{
+			label: t("portfolio"),
+			url: "/portfolio",
+			Icon: PaintBrushIcon,
+		},
+		{
+			label: t("blog"),
+			url: "/blog",
+			Icon: PencilSquareIcon,
+		},
+		{
+			label: t("contact"),
+			url: "/contact",
+			Icon: DevicePhoneMobileIcon,
+		},
+	];
+
 	return (
-		<div className="absolute inset-0 flex h-screen flex-col items-center justify-center gap-10 bg-white text-3xl capitalize">
-			<div>
-				<XMarkIcon className="absolute right-8 top-8 h-8 w-8" />
-			</div>
-			{navListItems.map(({ label, Icon, url }, index) => (
-				<div className="flex items-center " key={index}>
-					<Link href={url}>
-						<div className="text-text decoration-primary flex items-center gap-2 underline decoration-2 lg:rounded-full">
-							<Icon className="h-6 w-6" />
-							<span> {label}</span>
-						</div>
-					</Link>
+		<>
+			<div
+				className={`${toggle ? "fixed" : "hidden"} inset-0 left-0 right-0 top-0 flex h-screen w-full flex-col items-center justify-center gap-10 bg-colorBackground text-3xl capitalize`}
+			>
+				<NavMenu className={`${toggle && "!flex !flex-col"}`} navListItems={navListItems} />
+				<div className=" mt-10 flex items-center gap-1">
+					<DarkModeSwitcher />
+					<LanguageSwitcher locale={locale} />
 				</div>
-			))}
-			<div className=" mt-10 flex items-center gap-1">
-				<DarkModeSwitcher />
-				<LanguageSwitcher locale={locale} />
 			</div>
-		</div>
+			<ButtonHamburger toggle={toggle} setToggle={setToggle} />
+		</>
 	);
 };

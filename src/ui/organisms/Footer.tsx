@@ -25,7 +25,20 @@ export function FooterWithSocialLinks() {
 		<footer className="relative mt-10 w-full bg-colorBackgroundDark py-8">
 			<div className="mx-auto w-full max-w-7xl px-8">
 				<div className="flex flex-col justify-between gap-4 md:grid-cols-2 lg:flex-row">
-					<Logo className="text-4xl font-medium text-colorPrimary" />
+					<div>
+						<Logo className="text-4xl font-medium text-colorPrimary" />
+						<p className="mt-12 text-white">Bądz na bierząco</p>
+						<div className="mt-4 flex gap-8">
+							<input
+								className="bg-transparent px-6 text-white shadow shadow-colorPrimary"
+								type="text"
+								placeholder="foxdev.pl"
+							/>
+							<button className="rounded-full bg-transparent px-6 py-2 tracking-wide text-colorPrimary shadow shadow-colorPrimary">
+								SUBSKRYBUJ
+							</button>
+						</div>
+					</div>
 					<div className="grid grid-cols-3 justify-between gap-20	">
 						{LINKS.map(({ title, items }) => (
 							<ul key={title}>
@@ -37,7 +50,7 @@ export function FooterWithSocialLinks() {
 										<Typography
 											as="a"
 											href="#"
-											className="text-colorTextLight py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+											className="py-1.5 font-normal text-colorTextLight transition-colors hover:text-blue-gray-900"
 										>
 											{link}
 										</Typography>
@@ -48,14 +61,10 @@ export function FooterWithSocialLinks() {
 					</div>
 				</div>
 				<div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
-					<Typography
-						variant="small"
-						className="mb-4 text-center font-normal text-colorText md:mb-0"
-					>
-						&copy; {currentYear} <a href="https://material-tailwind.com/">Konrad Jankowski</a>.
-						Wszystkie prawa zastrzeżone.
+					<Typography variant="small" className="mb-4 text-center font-normal text-white md:mb-0">
+						&copy; {currentYear} <a href="">Konrad Jankowski</a>. Wszystkie prawa zastrzeżone.
 					</Typography>
-					<div className="text-textColor flex gap-4 sm:justify-center">
+					<div className="flex gap-4 text-white sm:justify-center">
 						<Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
 							<svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 								<path
