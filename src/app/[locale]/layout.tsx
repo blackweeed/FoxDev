@@ -3,7 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/ui/organisms/Navbar";
-import { FooterWithSocialLinks } from "@/ui/organisms/Footer";
+import { FooterWithSocialLinks } from "@/ui/organisms/Footer/Footer";
 import { BluredGradients } from "@/ui/atoms/BluredGradients";
 
 const rubik = Rubik({ subsets: ["latin"] });

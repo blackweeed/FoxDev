@@ -51,7 +51,7 @@ export const Techstack = () => {
 
 	return (
 		<div
-			className={`bg-colorBackgroundDark h-[260px] w-full rounded-t-[3.125rem] p-10 ${technologies[itemIndex].border} relative overflow-hidden `}
+			className={`h-[260px] w-full rounded-[3.125rem] bg-colorBackgroundDark p-10 ${technologies[itemIndex].border} relative overflow-hidden `}
 		>
 			<div className="grid h-full w-full grid-cols-4 grid-rows-2 gap-8">
 				{technologies.map((tech, index) => {

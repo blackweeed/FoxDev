@@ -18,7 +18,8 @@ export default withMT({
 					"linear-gradient(to right, #27debf, #53e0c7, #80e3d0, #add6d9, #c7d7e8, #e1e6f8)",
 			},
 			backgroundSize: {
-				"hero-overlay": "70%",
+				"hero-overlay": "75%",
+				"hero-overlay-mobile": "120%",
 			},
 			colors: {
 				colorPrimary: "rgb(var(--color-primary) / <alpha-value>)",
