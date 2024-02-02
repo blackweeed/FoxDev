@@ -3,7 +3,7 @@ import { SectionHero } from "@/ui/molecules/SectionHero/SectionHero";
 import { SectionAbout } from "@/ui/molecules/SectionAbout/SectionAbout";
 import { SectionTechnology } from "@/ui/organisms/SectionTechnology";
 import { SectionFAQ } from "@/ui/organisms/SectionFAQ";
-import { SectionContact } from "@/ui/organisms/SectionContact";
+import { SectionContact } from "@/ui/organisms/SectionContact/SectionContact";
 
 type FAQItem = {
 	question: string;
