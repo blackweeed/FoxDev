@@ -4,7 +4,7 @@ import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/re
 
 export function Form() {
 	return (
-		<Card className="p-8 text-primary" shadow={true}>
+		<Card className="p-8 text-colorPrimary shadow-lg shadow-colorPrimary">
 			<Typography variant="h3" color="blue-gray">
 				Formularz kontaktowy
 			</Typography>
@@ -13,7 +13,7 @@ export function Form() {
 			</Typography>
 			<form className="mb-2 mt-8 w-80 max-w-screen-lg sm:w-96">
 				<div className="mb-1 flex flex-col gap-6">
-					<Typography variant="h5" className="-mb-3 text-primary ">
+					<Typography variant="h5" className="-mb-3 text-colorPrimary ">
 						Twoje imię
 					</Typography>
 					<Input
@@ -24,7 +24,7 @@ export function Form() {
 							className: "before:content-none after:content-none",
 						}}
 					/>
-					<Typography variant="h5" className="-mb-3 text-primary ">
+					<Typography variant="h5" className="-mb-3 text-colorPrimary ">
 						Twój email
 					</Typography>
 					<Input
@@ -35,7 +35,7 @@ export function Form() {
 							className: "before:content-none after:content-none",
 						}}
 					/>
-					<Typography variant="h5" className="-mb-3 text-primary ">
+					<Typography variant="h5" className="-mb-3 text-colorPrimary ">
 						Twoja wiadomość
 					</Typography>
 					<textarea
@@ -54,7 +54,7 @@ export function Form() {
 					}
 					containerProps={{ className: "-ml-2.5" }}
 				/>
-				<Button className="mt-6 bg-bgColorDark text-base" fullWidth>
+				<Button className="mt-6 bg-colorBackgroundDark  text-base" fullWidth>
 					Wyślij
 				</Button>
 			</form>

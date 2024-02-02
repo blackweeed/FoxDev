@@ -1,6 +1,6 @@
 import React from "react";
-import { Pargraph } from "../atoms/Pargraph";
-import { ResponsiveImage } from "../atoms/ResponsiveImage";
+import { Pargraph } from "../../atoms/Pargraph";
+import { ResponsiveImage } from "../../atoms/ResponsiveImage";
 
 export const SectionAbout = ({ about }: { about: string }) => {
 	return (
@@ -8,7 +8,7 @@ export const SectionAbout = ({ about }: { about: string }) => {
 			<div className="lg:basis-[45%]">
 				<Pargraph about={about} />
 			</div>
-			<div className="pointer-events-none relative h-[20rem] w-full lg:h-[44rem] lg:basis-[55%]">
+			<div className="pointer-events-none relative h-[20rem] w-full opacity-80 lg:h-[44rem] lg:basis-[55%]">
 				<ResponsiveImage src={"/lis.png"} alt="fox image" />
 			</div>
 		</section>

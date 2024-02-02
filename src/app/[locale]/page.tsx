@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { SectionHero } from "@/ui/molecules/SectionHero";
-import { SectionAbout } from "@/ui/molecules/SectionAbout";
+import { SectionHero } from "@/ui/molecules/SectionHero/SectionHero";
+import { SectionAbout } from "@/ui/molecules/SectionAbout/SectionAbout";
 import { SectionTechnology } from "@/ui/organisms/SectionTechnology";
 import { SectionFAQ } from "@/ui/organisms/SectionFAQ";
 import { SectionContact } from "@/ui/organisms/SectionContact";

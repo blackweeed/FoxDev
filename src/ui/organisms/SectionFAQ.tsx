@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { HeadingSection } from "../atoms/HeadingSection/HeadingSection";
-import { FAQItem } from "../molecules/FAQItem";
+import { FAQItem } from "../molecules/FAQItem/FAQItem";
 
 type FAQItemType = {
 	question: string;

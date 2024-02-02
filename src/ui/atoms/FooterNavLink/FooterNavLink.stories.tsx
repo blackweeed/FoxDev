@@ -1,15 +1,29 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { FooterNavLink } from "./FooterNavLink";
 
 const meta: Meta<typeof FooterNavLink> = {
-	title: "FooterNavLink",
 	component: FooterNavLink,
 };
 
 export default meta;
+type Story = StoryObj<typeof FooterNavLink>;
 
-export const Base: StoryObj<typeof meta> = {
+export const Primary: Story = {
+	parameters: {
+		nextjs: {
+			appDirectory: true,
+		},
+	},
+	decorators: [
+		(Story) => (
+			<div style={{ margin: "3em" }}>
+				<Story />
+			</div>
+		),
+	],
 	args: {
-		className: "default-class",
+		items: ["elo", "elo1"],
+		title: "Heboj",
 	},
 };

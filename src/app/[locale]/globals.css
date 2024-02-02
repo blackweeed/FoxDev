@@ -34,7 +34,7 @@
 :root[class~="dark"] {
 	--color-primary: 39 222 191;
 	--color-background: 28 30 34; /* Ciemniejszy odcień szarości/bliski czerni */
-	--color-background-dark: 255 255 255;
+	--color-background-dark: 33 36 39;
 	--color-text: 255 255 255; /* Czysta biel dla tekstu, aby zapewnić kontrast */
 	--color-text-light: 0 0 0;
 	--color-text-lighter: 176 176 176; /* Jasnoszary, może pozostać taki sam lub nieco jaśniejszy */

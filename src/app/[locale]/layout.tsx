@@ -27,7 +27,8 @@ export default function LocaleLayout({
 					<div className="relative flex flex-col overflow-x-hidden">
 						<Navbar locale={locale} />
 						<BluredGradients />
-						<section className="relative flex-shrink">{children}</section>
+						{children}
+						{/* <section className="relative flex-shrink">{children}</section> */}
 						<FooterWithSocialLinks />
 					</div>
 				</Providers>

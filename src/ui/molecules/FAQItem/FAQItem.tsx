@@ -45,7 +45,7 @@ export const FAQItem = ({
 				</button>
 			</div>
 			<p
-				className={`text-colorTextLighter mt-2 max-w-[90%] transition-all duration-500 ${toggleAnswer === index ? "block" : "hidden"}`}
+				className={`mt-2 max-w-[90%] text-colorTextLighter transition-all duration-500 ${toggleAnswer === index ? "block" : "hidden"}`}
 			>
 				{answer}
 			</p>
