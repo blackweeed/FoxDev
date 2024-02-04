@@ -2,10 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	cursor: none;
+}
+
 .hello {
 	background: linear-gradient(-45deg, #0f9a7a, hsl(162, 43%, 46%), #23d5a5c2, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+}
+
+.custom-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 9999;
+	mix-blend-mode: difference;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+.cursor-text {
+	font-size: 5px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	display: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: none;
 }
 
 @keyframes gradient {
@@ -57,11 +89,4 @@
 	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
 	width: 100%;
 	height: 100vh;
-}
-
-.custom-div {
-	background: pink; /* Tło elementu, można dostosować do potrzeb */
-	border-radius: 50px 0 0 50px; /* Zaokrąglenie lewej strony elementu */
-	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* Przycięcie prawej strony elementu */
-	/* Dalsze style, takie jak padding, margin, itp., można dodać według potrzeb */
 }

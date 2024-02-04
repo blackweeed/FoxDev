@@ -16,7 +16,7 @@ export const FooterNavLink = ({ title, items }: FooterNavLinkProps) => {
 			</Typography>
 			{items.map((link) => (
 				<Link href={"/"} key={link}>
-					<Typography className="py-1.5 font-normal text-colorTextLight transition-colors hover:text-colorBackground/70">
+					<Typography className="py-1.5 font-normal text-white transition-colors hover:text-colorBackground/70 ">
 						{link}
 					</Typography>
 				</Link>

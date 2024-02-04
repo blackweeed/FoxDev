@@ -19,9 +19,9 @@ export const SectionFAQ = ({ faqArray, heading, headingSpan }: SectionFAQProps) 
 	const [toggleAnswer, setToggleAnswer] = useState(0);
 
 	return (
-		<section className="mt-16 w-full px-6 lg:px-40">
+		<section className="mb-10 mt-16 w-full px-6 lg:px-40">
 			<HeadingSection
-				className="[&>*:last-child]:underline [&>*:last-child]:decoration-colorPrimary"
+				className="mb-10 [&>*:last-child]:underline [&>*:last-child]:decoration-colorPrimary"
 				heading={heading}
 				headingSpan={headingSpan}
 			/>

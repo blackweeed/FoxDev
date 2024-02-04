@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/ui/organisms/Navbar";
 import { FooterWithSocialLinks } from "@/ui/organisms/Footer/Footer";
 import { BluredGradients } from "@/ui/atoms/BluredGradients";
+import { CustomCursor } from "@/ui/molecules/CustomCursor/CustomCursor";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -26,9 +27,9 @@ export default function LocaleLayout({
 				<Providers>
 					<div className="relative flex flex-col overflow-x-hidden">
 						<Navbar locale={locale} />
-						<BluredGradients />
+						{/* <BluredGradients /> */}
 						{children}
-						{/* <section className="relative flex-shrink">{children}</section> */}
+						<CustomCursor />
 						<FooterWithSocialLinks />
 					</div>
 				</Providers>
